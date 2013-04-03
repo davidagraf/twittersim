@@ -1,13 +1,10 @@
-'use strict';
-
 angular.module('wedwitterApp', [])
-  .config(function ($routeProvider) {
+  .config ['$routeProvider', ($routeProvider) ->
     $routeProvider
-      .when('/', {
+      .when '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
+      .otherwise
         redirectTo: '/'
-      });
-  });
+    null
+  ]
