@@ -1,7 +1,7 @@
 angular.module('wedwitterApp')
   .controller('MainCtrl', ['$scope', '$http',
   ($scope, $http) ->
-    $scope.counter = 1
+    $scope.counter = 0
     snd = new Audio "data/preview.mp3"
 
     $http.get('data/tweets.json').success (data) ->
