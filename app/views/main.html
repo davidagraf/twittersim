@@ -1,3 +1,14 @@
 <div class="hero-unit">
-  <div class="tweet" ng-repeat="n in [] | range:counter">{{n}}</div>
+  <div class="tweet row" ng-repeat="n in [] | range:counter">
+    <div class="left span1">
+      <img class="logo" ng-src="images/logos/{{tweets[n].user}}.png"/>
+    </div>
+    <div class="span5">
+      <div>
+        <span class="name">{{tweets[n].name}}</span>
+        <span class="user">@{{tweets[n].user}}</span>
+      </div>
+      <div class="text">{{tweets[n].text}}</div>
+    </div>
+  </div>
 </div>

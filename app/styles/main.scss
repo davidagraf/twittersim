@@ -1,9 +1,30 @@
 @import "compass_twitter_bootstrap";
 
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 .tweet {
-  border-width: 1px;
-  border-color: #AAAAAA; 
-  border-style:solid;
+  border: solid 1px #AAAAAA;
   padding: 10px;
   width: 500px;
+}
+
+.logo {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+.user {
+  font-size: 12px;
+  color: #999;
+}
+
+.text {
+
 }
