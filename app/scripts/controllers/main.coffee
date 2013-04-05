@@ -7,11 +7,15 @@ angular.module('wedwitterApp')
     $http.get('data/tweets.json').success (data) ->
       $scope.tweets = data
 
-    $("html").keypress ->
+    $("html").keydown (ev) ->
       $scope.$apply ->
-        if $scope.tweets.length > $scope.counter
-          snd.play()
-          $scope.counter = $scope.counter + 1
+        if ev.keyCode == 37 or ev.keyCode == 38
+          if $scope.counter > 0
+            $scope.counter = $scope.counter - 1
+        else
+          if $scope.tweets.length > $scope.counter
+            snd.play()
+            $scope.counter = $scope.counter + 1
   ])
 
 # usage e.g.: ng-repeat="n in [] | range:someVariable"
